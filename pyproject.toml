@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "experiment-notifier"
+version = "0.1.0"
+description = "Zero-intrusion WeCom experiment notifications"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+notify-run = "experiment_notifier.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["experiment_notifier*"]
