@@ -4,13 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "experiment-notifier"
-version = "0.1.0"
-description = "Zero-intrusion WeCom experiment notifications"
+version = "0.2.0"
+description = "Zero-intrusion WeCom notifications for training and Optuna studies"
 requires-python = ">=3.9"
 dependencies = []
 
+[project.optional-dependencies]
+optuna = ["optuna>=3,<5"]
+
 [project.scripts]
 notify-run = "experiment_notifier.cli:main"
+notify-run-optuna = "experiment_notifier.optuna_cli:main"
 
 [tool.setuptools.packages.find]
 include = ["experiment_notifier*"]
